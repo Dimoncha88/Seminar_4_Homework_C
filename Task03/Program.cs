@@ -7,18 +7,16 @@
 Console.Clear();
 Console.WriteLine("Введите размерность массива:");
 int n = int.Parse(Console.ReadLine());
-int[] RandArray(int m)
+int[] FillRandArray(int m)
 {
     Random rnd = new Random();
     int[] arr = new int[m];
-    for(int i = 0; i < m; i++)
+    for (int i = 0; i < m; i++)
     {
-        arr[i] = rnd.Next(0,100);
+        arr[i] = rnd.Next(0, 100);
     }
     return arr;
 }
 
-int[] arr = RandArray(n);
-Console.Write("[");
-Console.Write(String.Join(", ", arr));
-Console.Write("]");
+int[] arr = FillRandArray(n);
+Console.Write($"[{String.Join(", ", arr)}]");
