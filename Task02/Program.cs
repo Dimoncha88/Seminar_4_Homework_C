@@ -9,7 +9,7 @@ Console.Clear();
 Console.WriteLine("Введите число:");
 int number = int.Parse(Console.ReadLine());
 
-int SumNumbers(int num)
+int FindSumNumbers(int num)
 {
     int sum = num % 10;
     while (num >= 10)
@@ -19,4 +19,4 @@ int SumNumbers(int num)
     }
     return sum;
 }
-Console.WriteLine($"Сумма цифр в числе = {SumNumbers(number)}");
+Console.WriteLine($"Сумма цифр в числе = {FindSumNumbers(number)}");
